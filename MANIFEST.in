@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include pacvoices *.css
+recursive-include pacvoices *.csv
+recursive-include pacvoices *.html
+recursive-include pacvoices *.ico
+recursive-include pacvoices *.js
+recursive-include pacvoices *.json
+recursive-include pacvoices *.md
+recursive-include pacvoices *.png
+recursive-include pacvoices *.py
+recursive-include pacvoices *.svg
+recursive-include pacvoices *.txt
+recursive-exclude pacvoices *.pyc
