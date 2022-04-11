@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-04-12 05:48:02.801953",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "column_break_2",
+  "topic",
+  "section_break_3",
+  "discussion_content_type",
+  "discussion_content",
+  "discussion_content_md",
+  "discussion_content_html",
+  "section_break_9",
+  "path"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Link",
+   "label": "Topic",
+   "options": "Topics"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.discussion_content_type === 'Rich Text'",
+   "fieldname": "discussion_content",
+   "fieldtype": "Text Editor",
+   "label": "Discussion Content"
+  },
+  {
+   "depends_on": "eval:doc.discussion_content_type === 'Markdown'",
+   "fieldname": "discussion_content_md",
+   "fieldtype": "Markdown Editor",
+   "label": "Discussion Content(Markdown)"
+  },
+  {
+   "depends_on": "eval:doc.discussion_content_type === 'HTML'",
+   "fieldname": "discussion_content_html",
+   "fieldtype": "HTML Editor",
+   "label": "Discussion Content (HTML)"
+  },
+  {
+   "default": "Rich Text",
+   "fieldname": "discussion_content_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Discussion Content Type",
+   "options": "Rich Text\nMarkdown\nHTML",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "path",
+   "fieldtype": "Data",
+   "label": "Routing Path"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-04-12 06:20:25.455765",
+ "modified_by": "Administrator",
+ "module": "PAC Voices",
+ "name": "Discussion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

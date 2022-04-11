@@ -1,7 +1,7 @@
 {
  "category": "Modules",
  "charts": [],
- "creation": "2022-04-11 18:22:13.827737",
+ "creation": "2022-04-11 20:26:37.471934",
  "developer_mode_only": 0,
  "disable_user_customization": 0,
  "docstatus": 0,
@@ -14,9 +14,9 @@
  "is_standard": 1,
  "label": "PAC Voices",
  "links": [],
- "modified": "2022-04-11 18:46:32.379256",
+ "modified": "2022-04-11 20:26:37.471934",
  "modified_by": "Administrator",
- "module": "Members",
+ "module": "PAC Voices",
  "name": "PAC Voices",
  "owner": "Administrator",
  "pin_to_bottom": 0,
@@ -26,6 +26,12 @@
    "doc_view": "",
    "label": "Member",
    "link_to": "Member",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Topic",
+   "link_to": "Topics",
    "type": "DocType"
   }
  ]
