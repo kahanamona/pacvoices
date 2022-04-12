@@ -11,7 +11,7 @@ setup(
 	version=version,
 	description="Application Application for the Pacific Regional Civil Society Organisations to record their Voices",
 	author="Kahanamona",
-	author_email="sione@caitlah.com",
+	author_email="sione@caitlah.com | finau@caitlah.com | meleane@caitlah.com",
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,

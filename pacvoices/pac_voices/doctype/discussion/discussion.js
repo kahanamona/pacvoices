@@ -29,8 +29,6 @@ frappe.ui.form.on('Discussion', {
 
 	refresh: function(frm) {
 
-		
-
 		if (!in_list(frappe.user_roles, 'System Manager', 'PAC Voices Admin','PAC Voices Supervisor')){
 			frm.page.sidebar.hide(); // this removes the sidebar
 		//	$(".form-footer").hide();

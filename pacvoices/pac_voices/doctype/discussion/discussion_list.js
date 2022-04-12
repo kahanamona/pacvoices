@@ -6,10 +6,15 @@ frappe.listview_settings['Discussion'] = {
     add_fields: ["status", "title"],
 
 	get_indicator: function(doc) {
-		if(doc.published) {
-			return [__("Open"), "green", "published,=,Yes"];
-		} else {
-			return [__("Closed"), "black", "status,=,Yes"];
+		if (doc.status) {
+			var indicator = [__(doc.status), frappe.utils.guess_colour(doc.status), "status,=," + doc.status];
+			indicator[1] = {
+				"Open": "orange",
+				"Implemented": "green",
+				"Pending": "red",
+				"Close" : "blue"
+			}[doc.status];
+			return indicator;
 		}
 	},
     refresh: function(frm) {

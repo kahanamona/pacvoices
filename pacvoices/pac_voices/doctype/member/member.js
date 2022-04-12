@@ -19,7 +19,7 @@ frappe.ui.form.on('Member', {
 
 	onload: function(frm){
 
-		if ((frappe.session.user !== frm.doc.owner) && (!in_list(frappe.user_roles, 'System Manager', 'PAC Voices Admin','PAC Voices Supervisor'))) {
+		if ((frappe.session.user !== frm.doc.user) && (!in_list(frappe.user_roles, 'System Manager', 'PAC Voices Admin','PAC Voices Supervisor'))) {
 
 			frm.toggle_enable('user', false)
 			frm.toggle_enable('status', false)
@@ -29,7 +29,7 @@ frappe.ui.form.on('Member', {
 			frm.toggle_enable('organisation', false)
 			frm.toggle_enable('region', false)
 		}
-		if ((frappe.session.user === frm.doc.owner)){
+		if ((frappe.session.user === frm.doc.user)){
 			frm.toggle_enable('user', true)
 			frm.toggle_enable('status', true)
 			frm.toggle_enable('first_name', true)

@@ -89,7 +89,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-04-12 13:37:19.721204",
+ "modified": "2022-04-13 09:07:39.875974",
  "modified_by": "Administrator",
  "module": "PAC Voices",
  "name": "Member",
@@ -144,6 +144,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "track_changes": 1,
- "track_seen": 1
+ "track_changes": 1
 }

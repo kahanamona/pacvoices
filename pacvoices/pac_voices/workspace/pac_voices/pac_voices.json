@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "PAC Voices",
  "links": [],
- "modified": "2022-04-12 07:51:17.705933",
+ "modified": "2022-04-13 10:09:33.891991",
  "modified_by": "Administrator",
  "module": "PAC Voices",
  "name": "PAC Voices",
@@ -24,7 +24,7 @@
  "shortcuts": [
   {
    "doc_view": "",
-   "label": "Member",
+   "label": "Members",
    "link_to": "Member",
    "type": "DocType"
   },
