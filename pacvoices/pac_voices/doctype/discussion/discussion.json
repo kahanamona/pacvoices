@@ -1,13 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:title",
  "creation": "2022-04-12 05:48:02.801953",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "published",
+  "published_date",
   "title",
-  "column_break_2",
   "topic",
   "section_break_3",
   "discussion_content_type",
@@ -21,11 +23,15 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title"
+   "label": "Title",
+   "unique": 1
   },
   {
    "fieldname": "topic",
    "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Topic",
    "options": "Topics"
   },
@@ -61,22 +67,33 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_2",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "section_break_9",
    "fieldtype": "Section Break"
   },
   {
    "fieldname": "path",
    "fieldtype": "Data",
-   "label": "Routing Path"
+   "hidden": 1,
+   "label": "Routing Path",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "default": "Today",
+   "depends_on": "published",
+   "fieldname": "published_date",
+   "fieldtype": "Date",
+   "label": "Published Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-04-12 06:20:25.455765",
+ "modified": "2022-04-12 13:28:50.843769",
  "modified_by": "Administrator",
  "module": "PAC Voices",
  "name": "Discussion",
@@ -91,6 +108,41 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PAC Voices Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PAC Voices Supervisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PAC Voices Member",
    "share": 1,
    "write": 1
   }

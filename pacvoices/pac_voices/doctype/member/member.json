@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "naming_series",
+ "autoname": "naming_series:",
  "creation": "2022-04-11 20:21:32.954026",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -16,7 +16,8 @@
   "full_name",
   "data_5",
   "last_name",
-  "organisation"
+  "organisation",
+  "region"
  ],
  "fields": [
   {
@@ -41,6 +42,9 @@
    "fetch_from": "user.full_name",
    "fieldname": "full_name",
    "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Full Name",
    "unique": 1
   },
@@ -76,11 +80,16 @@
    "hidden": 1,
    "label": "Naming Series",
    "options": "YYYY.####"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-04-12 05:39:02.454166",
+ "modified": "2022-04-12 13:37:19.721204",
  "modified_by": "Administrator",
  "module": "PAC Voices",
  "name": "Member",
@@ -95,6 +104,40 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PAC Voices Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PAC Voices Supervisor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "PAC Voices Member",
    "share": 1,
    "write": 1
   }

@@ -2,7 +2,7 @@ from . import __version__ as app_version
 
 app_name = "pacvoices"
 app_title = "PAC Voices"
-app_publisher = "Kahanamona"
+app_publisher = "Kahanamona Team"
 app_description = "Application Application for the Pacific Regional Civil Society Organisations to record their Voices"
 app_icon = "octicon:book-16"
 app_color = "Red"
