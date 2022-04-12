@@ -16,4 +16,28 @@ frappe.ui.form.on('Member', {
 			frm.page.wrapper.find(".layout-main-section-wrapper").addClass("col-md-10");
 		}
 	},
+
+	onload: function(frm){
+
+		if ((frappe.session.user !== frm.doc.owner) && (!in_list(frappe.user_roles, 'System Manager', 'PAC Voices Admin','PAC Voices Supervisor'))) {
+
+			frm.toggle_enable('user', false)
+			frm.toggle_enable('status', false)
+			frm.toggle_enable('first_name', false)
+			frm.toggle_enable('last_name', false)
+			frm.toggle_enable('full_name', false)
+			frm.toggle_enable('organisation', false)
+			frm.toggle_enable('region', false)
+		}
+		if ((frappe.session.user === frm.doc.owner)){
+			frm.toggle_enable('user', true)
+			frm.toggle_enable('status', true)
+			frm.toggle_enable('first_name', true)
+			frm.toggle_enable('last_name', true)
+			frm.toggle_enable('full_name', true)
+			frm.toggle_enable('organisation', true)
+			frm.toggle_enable('region', true)
+
+		}
+	}
 });

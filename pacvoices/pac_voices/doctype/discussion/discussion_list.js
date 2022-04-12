@@ -3,13 +3,13 @@
 
 frappe.listview_settings['Discussion'] = {
     hide_name_column: true,
-    add_fields: ["published", "title"],
+    add_fields: ["status", "title"],
 
 	get_indicator: function(doc) {
 		if(doc.published) {
-			return [__("Published"), "green", "published,=,Yes"];
+			return [__("Open"), "green", "published,=,Yes"];
 		} else {
-			return [__("Not Published"), "gray", "published,=,Yes"];
+			return [__("Closed"), "black", "status,=,Yes"];
 		}
 	},
     refresh: function(frm) {
