@@ -29,9 +29,9 @@ frappe.ui.form.on('Discussion', {
 
 	refresh: function(frm) {
 
-		if (!in_list(frappe.user_roles, 'System Manager', 'PAC Voices Admin','PAC Voices Supervisor')){
+		if (in_list(frappe.user_roles, 'PAC Voices Member')){
 			frm.page.sidebar.hide(); // this removes the sidebar
-		//	$(".form-footer").show();
+			$(".form-footer").show();
 			frm.page.wrapper.find(".layout-main-section-wrapper").addClass("col-md-12");
 		}
 
