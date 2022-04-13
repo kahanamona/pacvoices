@@ -37,7 +37,7 @@ frappe.ui.form.on('Discussion', {
 
 		if (in_list(frappe.user_roles, 'System Manager', 'PAC Voices Admin','PAC Voices Supervisor')){
 			frm.page.sidebar.show(); // this removes the sidebar
-		//	$(".form-footer").show();
+			$(".form-footer").show();
 			frm.page.wrapper.find(".layout-main-section-wrapper").addClass("col-md-10");
 		}
 	},
