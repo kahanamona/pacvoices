@@ -602,6 +602,22 @@ banner
   color: green;
   font-weight: 900;
 }
+/*
+---------------------------------------------
+Topic Section
+---------------------------------------------
+*/
+
+.item-display {
+  position: relative;
+  padding-top: 2px;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
 
 /*
 ---------------------------------------------
@@ -946,4 +962,18 @@ responsive
   .feature-item .right-content a.text-button {
     margin-left: 130px;
   }
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.avatar-initials {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
