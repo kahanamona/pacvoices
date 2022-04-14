@@ -180,7 +180,7 @@ header
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color: #black!important;
+  color: black!important;
 }
 
 .background-header .main-nav .nav li:last-child a {
@@ -603,6 +603,53 @@ banner
   font-weight: 900;
 }
 
+/*
+---------------------------------------------
+Topic Section
+---------------------------------------------
+*/
+
+.main-topic {
+  position: relative;
+
+  padding-top: 10%;
+
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+
+/*
+---------------------------------------------
+Heading Section
+---------------------------------------------
+*/
+
+.main-heading {
+  position: relative;
+  padding-top: 0%;
+  padding-left: 0px;
+  padding-bottom : 0px;
+}
+
+.main-heading .caption h6 {
+  padding-bottom: 0px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.main-heading .caption .views h6 {
+ 
+  padding-bottom: 0px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
 
 /*
 ---------------------------------------------
@@ -616,12 +663,12 @@ features
 
 .feature-item {
   display: inline-block;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 .feature-item .left-icon img {
   float: left;
-  margin-right: 30px;
+  margin-right: 0px;
 }
 
 .feature-item .right-content {
@@ -630,7 +677,7 @@ features
 
 .feature-item .right-content h4 {
   margin-top: 0px;
-  margin-bottom:  7px;
+  margin-bottom:  0px;
   letter-spacing: 0.25px;
   color: #232d39;
   font-size: 19px;

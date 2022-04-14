@@ -20,7 +20,7 @@
     
     <body>
     
-    <!-- ***** Preloader Start ***** -->
+    <!-- ***** Preloader Start 
     <div id="js-preloader" class="js-preloader">
       <div class="preloader-inner">
         <span class="dot"></span>
@@ -31,9 +31,7 @@
         </div>
       </div>
     </div>
-    <!-- ***** Preloader End ***** -->
-    
-    
+    ***** Preloader End ***** -->   
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -55,21 +53,59 @@
     </header>
     <!-- ***** Header Area End ***** -->
 
-    <!-- ***** Main Banner Area Start ***** -->
-    <div class="main-banner" id="top">
-       
-            <img src="/images/background.jpg" width= "100%" type="images/img" />
-        <div>
-            <div class="caption">
-                <h6 style="color: saddlebrown;">Every Discussion is a way to a solution</h6>
-                <h2 style="color: saddlebrown;" >stay connected <em>together !</em></h2>
-                <div class="main-button scroll-to-section">
-                    <a href="http://202.134.27.166:8082/view">View Discussion</a>
-                </div>
+    <!-- ***** Main Start ***** -->
+    <section class="section" id="features">
+      <div class="container">
+        {% if discussion %}
+        <div class="row">
+         <div class="main-topic col-lg-12">
+          <div class="col-lg-7">
+            <div class="main-heading caption">
+              <h6>Topic</h6>
             </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="main-heading caption views">
+                <h6></h6>
+              </div>
+            </div>
+            <div class="col-lg-1">
+              <div class="main-heading caption views">
+                <h6>Views</h6>
+              </div>
+            </div>
+            <div class="col-lg-1">
+              <div class="main-heading caption views">
+                <h6>Replies</h6>
+              </div>
+            </div>
+         </div>
         </div>
-    </div>
-    <!-- ***** Main Banner Area End ***** -->
+      </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+
+                {% for item in discussion %}
+                  <div class="col-lg-12">
+                    <ul class="features-items">
+                        <li class="feature-item">
+                            <div class="right-content">
+                                <h5><a href="#">{{ item.title }}</a></h5>
+                                <span class="badge badge-secondary"> {{ item.topic }}</span>
+                                <span class="badge badge-info"> {{ item.published_date }}</span>
+                            </div>
+                        </li>
+                      <hr>
+                    </ul>
+                  </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+      </div>
+    </section>
+  
+    <!-- ***** Main End ***** -->
     
     <!-- ***** Footer Start ***** -->
     <footer>
