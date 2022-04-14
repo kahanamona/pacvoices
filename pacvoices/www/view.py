@@ -12,6 +12,6 @@ def get_context(context):
 #        raise frappe.Redirect
  
 
-    context.discussion = frappe.db.sql("select name, title, topic, discussion_content, published_date, owner, status from `tabDiscussion` where published = 1", as_dict=True)
+    context.discussion = frappe.db.sql("select name, title, topic, discussion_content, published_date, owner, status from `tabDiscussion` where published = 1 ORDER BY creation DESC", as_dict=True)
 #    context.user_list = frappe.db.sql("select name, email, full_name, user_image from `tabUser`", as_dict=True)
 #    context.document_manager = frappe.db.sql("select owner, modified, sub_menu, file_url, file_name, top_menu from `tabFile` where published = 1 and is_private = 0", as_dict=True)

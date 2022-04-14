@@ -25,29 +25,21 @@
                                     <span class="badge badge-info">{{ topics.published_date.strftime('%d-%m-%Y') }}</span>
                                     <span class="badge badge-secondary">{{ topics.topic }}</span>
                                 </td>
-                                <td style="width: 60%">
-                                    <p>{{ topics.discussion_content[:500] }}</p>
+                                <td style="width: 40%">
+                                    <p>{{ topics.discussion_content }}</p>
                                 </td>
-                                  {% if member.user_image %}
-                                    <td style="width: 10%">
-                                      <a href="#" data-toggle="tooltip" title="{{ member.full_name }}">
-                                      <img class="avatar" src="{{ member.user_image }}">
-                                      </a> </td>
-                                  {% else %}
+                                <td style="width: 20%"></td>
+
+                                {% if member.user_image %}
+                                  <td style="width: 20%"> 
+                                    <img class="avatar" src="{{ member.user_image }}"> </td>
+                                {% else %}
                                     {% if member.full_name == "Administrator" %}
-                                        <td><a href="#" data-toggle="tooltip" title="{{ member.name }}"><img class="avatar" src="https://avatar.oxro.io/avatar.svg?name={{ member.full_name }}&length=1">
-                                        </a> </td>
+                                        <td> <img class="avatar" data-toggle="tooltip" data-placement="top" title="Tooltip on top" src="https://avatar.oxro.io/avatar.svg?name={{ member.full_name }}&length=1"></td>
                                     {% else %}
-                                        <td><a href="#" data-toggle="tooltip" title="{{ member.full_name }}">
-                                          <img class="avatar" src="https://avatar.oxro.io/avatar.svg?name={{ member.full_name }}&length=2">
-                                        </a></td>
+                                        <td> <img class="avatar" src="https://avatar.oxro.io/avatar.svg?name={{ member.full_name }}&length=2"></td>
                                     {% endif %}
                                 {% endif %}
-                                <td style="width: 10%">
-                                <div class="main-button">
-                                  <a href="/login">Read..</a>
-                              </div>
-                            </td>
                               </tr>
                           </tbody>
                           {% endfor %}

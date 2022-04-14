@@ -18,20 +18,7 @@
 
     </head>
     
-    <body>
-    
-    <!-- ***** Preloader Start 
-    <div id="js-preloader" class="js-preloader">
-      <div class="preloader-inner">
-        <span class="dot"></span>
-        <div class="dots">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-    ***** Preloader End ***** -->   
+    <body> 
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -44,13 +31,15 @@
                         <!-- ***** Menu Start ***** -->
                            
                         <!-- ***** Menu End ***** -->
-                        <ul class="nav main-button">
-                            
-                            <li><a href="/login">Log In</a></li>
+                        <ul class="nav">
+                            <form class="form-inline my-2 my-lg-0" action="http://192.168.56.104/display.html" method="GET"> 
+                                <input name="search" id="search" value="" class="form-control mr-sm-2" type="text" placeholder="Search">
+                            </form>
+                            <li class="main-button"><a href="http://202.134.27.166:8082/login">Log In</a></li>
                         </ul>
                         <a class='menu-trigger'>
-                          <span>Menu</span>
-                      </a>
+                            <span>Menu</span>
+                        </a> 
                     </nav>
                 </div>
             </div>
